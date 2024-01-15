@@ -2,25 +2,25 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: todo-app-deployment
-  namespace: todo-app-99
+  namespace: todo-app-jf-new
   labels:
-    app: todo-app
+    app: todo-app-jf-new
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: todo-app
+      app: todo-app-jf-new
   template:
     metadata:
       labels:
-        app: todo-app
+        app: todo-app-jf-new
     spec:
       containers:
-      - name: todo-db-nextjs
-        image: rudipailer/todo-db:latest
+      - name: todo-app-jf-new
+        image: julia8893/todo-app-jf-new:latest
         ports:
         - containerPort: 3000
-          name: todo
+          name: todo-app-jf-new
         env:
           - name: BASE_PATH
             valueFrom:

@@ -100,7 +100,7 @@ export default function Home() {
     let todo = {
       _id: uuidv4(),
       text: input,
-      fsinished: false,
+      finished: false,
     }
     let url = process.env.BASE + '/api/' + storePath;
     console.log(url);
